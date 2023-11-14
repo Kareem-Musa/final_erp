@@ -1,0 +1,27 @@
+{% load static %}
+<!doctype html>
+<html dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="{% static 'css/bs/bootstrap.rtl.min.css" rel="stylesheet" rel="stylesheet" />
+    <link href="{% static 'css/base.css' %}" rel="stylesheet" />
+    {% block title %}{% endblock %}
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          {% block side %}{% endblock %}
+        </div>
+        <div class="col-8">
+          {% block content %}{% endblock %}
+        </div>
+      </div>
+    </div>
+    <script src="{% static 'js/bs/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/jquery-3.7.1.js' %}"></script>
+    {% block js %}{% endblock %}
+  </body>
+</html>
